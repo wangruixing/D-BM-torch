@@ -40,7 +40,8 @@ dbm_test.labels = labels
 render_output(-1,4)
 render_supervised(-1)
 for i = 0,20,1 do     -----train backprop
-  dbm_test.train_backprop(layers = 1)
+  layers = 1
+  dbm_test.train_backprop(layers)
   render_output(i,4)
   render_supervised(i)
 end
