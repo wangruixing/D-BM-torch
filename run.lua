@@ -12,7 +12,7 @@ function render_supervised(i)
   print(i+" cycle entropy: "+ entropy[-1]+" cycle accuracy: "+accuracy[-1])
 end
 
-dataset = torch.round(torch.rand(10000, 1))
+dataset =  1-torch.round(torch.rand(10000, 1))
 labels = 1- dataset
 dataset = torch.cat(dataset,1-dataset,1)
 dataset = torch.cat(dataset,torch.ones(getn(dataset),1),1)
